@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="582.0" prefWidth="1223.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jones.hitboxesdemo.FXMLController">
+   <children>
+      <Pane fx:id="panCar" layoutX="67.0" layoutY="136.0" prefHeight="74.0" prefWidth="209.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../car-background-clipart-1.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="recCar" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="39.0" layoutX="28.0" layoutY="23.0" stroke="RED" strokeType="INSIDE" width="146.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="panRock" prefHeight="141.0" prefWidth="209.0" translateX="960.0" translateY="175.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Rock.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="polRock" fill="#2197ff00" points="-5.75, 31.75, -35.25, 25.25, -70.0, 14.75, -79.5, -5.25, -73.0, -31.5, -58.5, -56.75, -38.25, -81.0, -4.0, -94.5, 35.75, -100.0, 59.25, -96.25, 113.75, -38.0, 119.0, -19.0, 113.75, 7.0, 94.25, 21.5" stroke="RED" strokeType="INSIDE" translateX="81.0" translateY="102.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
