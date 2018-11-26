@@ -17,7 +17,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(root);
       
         
-        stage.setTitle("JavaFX and Maven");
+        stage.setTitle("Hitbox Demo");
         stage.setScene(scene);
         stage.show();
          stage.setOnCloseRequest(e -> System.exit(0));
