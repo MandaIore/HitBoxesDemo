@@ -1,3 +1,8 @@
+/*
+*  Made By: spencer jones
+ * Date: 2018-11-26
+ * Description: Demo program to help others understand custom hitboxes using polygons
+*/
 package jones.hitboxesdemo;
 
 import java.net.URL;
@@ -66,13 +71,14 @@ public class FXMLController implements Initializable {
     This is were the magic happens
     becase the polygons used for the collion are in two diffrant Panes the objects in them can not directly collied.
     This method creates a transparent copy of whatever polygon you pass it.
-    It is used in the initilize to create a copy of the polygon used for the rock hit box then add it to the car pane so we can check for collision
+    It is used in the initilize to create a copy of the polygon used for the rock hitbox then it adds that copy to the car pane so we can check for collision.
+    The invisble copy does every thing it's original does
     */
     private Polygon createBoundsPolygon(Polygon poly) {  
-        Polygon pol = new Polygon();
-        pol.setFill(Color.TRANSPARENT);
-        pol.getPoints().addAll(poly.getPoints());
-        return pol;
+        Polygon pol = new Polygon();                    //creates new polygon called pol
+        pol.setFill(Color.TRANSPARENT);                 //makes pol transparent so you don't see it
+        pol.getPoints().addAll(poly.getPoints());       // polygons use points (x and y quadrants) to determine there size and shape. So in this line it is setting the points of pol to all of the points of the polygon you passed it
+        return pol;                                     // returns the new polygon named pol
     }
 
     @Override
